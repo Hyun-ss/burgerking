@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+<th:block th:insert="~{layout/layout :: Head}" />
+<link rel="stylesheet" href="/css/index.css">
+</head>
+<body>
+	<p>인덱스페이지</p>
+	<a href="/signin">로그인</a>
+	<a href="/signup">회원가입</a>
+	<p>커밋테스트</p>
+	<header>
+		<th:block th:insert="~{layout/layout :: Header}" />
+	</header>
+	<main>
+		<th:block th:insert="~{layout/layout :: Main}" />
+	</main>
+	<footer>
+		<th:block th:insert="~{layout/layout :: Footer}" />
+	</footer>
+</body>
+</html>
