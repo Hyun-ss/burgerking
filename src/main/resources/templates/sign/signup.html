@@ -11,6 +11,84 @@
 	<p>회원가입페이지</p>
 	<header>
 		<th:block th:insert="~{layout/layout :: Header}" />
+		<div class="headerWrap">
+			<div class="head-menuWrap">
+				<div class="web-container">
+					<h1 class="web-logo">
+						<span>버거킹</span>
+					</h1>
+					<div class="utilmap">
+						<a>
+							<span>버거킹</span>
+						</a>
+						<a>
+							<span>로그인</span>
+						</a>
+						<a>
+							<span>고객센터</span>
+						</a>
+					</div>
+					<div class="btn-join">
+						<a>
+							<span>회원가입</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="mainContent">
+			<div class="web-container">
+			<h1>회원가입</h1>
+				<div class="log-container">
+					<h2>
+						<span>이용약관</span>
+					</h2>
+				</div>
+			메인영역
+			<div class="container_auth-list">
+				<div class="titbox">
+					<p>회원가입 약관 동의 및 본인인증을 진행합니다</p>
+				</div>
+				<div>
+					<label>
+						<input type="checkbox" class="check">
+						<span>버거킹 이용약관(필수)</span>
+					</label>
+					<button type="button">
+						<span>상세보기</span>
+					</button>
+				</div>
+				<div>
+					<label>
+						<input type="checkbox" class="check">
+						<span>개인정보처리방침(필수)</span>
+					</label>
+					<button type="button">
+						<span>상세보기</span>
+					</button>
+				</div>
+				<div>
+					<label>
+						<input type="checkbox" class="check">
+						<span>E-mail 광고성 정보 동의(선택)</span>
+					</label>
+				</div>
+				<div class="sms">
+					<label>
+						<input type="checkbox" class="check">
+						<span>SMS 광고성 정보 동의(선택)</span>
+					</label>
+					<span class="info">다양한 이벤트와 주문 정보를 보내 드립니다.</span>
+				</div>
+				<div class="divide">
+					<label>
+						<input type="checkbox" class="check">
+						<span>약관 전체 동의</span>
+					</label>
+				</div>
+			</div>
+			</div>
+		</div>
 	</header>
 	<footer>
 		<th:block th:insert="~{layout/layout :: Footer}" />
