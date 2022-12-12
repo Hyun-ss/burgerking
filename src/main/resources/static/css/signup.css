@@ -75,22 +75,12 @@ div.c_btn > a{
 	padding: 50px 0px 45px;
 }
 input[type=checkbox]{
-display: none;	
-}
-input[type=checkbox] + label { 
 	cursor: pointer; 
+	width: 18px;
+	height: 18px;
 	line-height: 22px; 
 	padding-left: 30px; 
-	background: url('/images/checkbox_signup.png') left/22px no-repeat; 
-	
 }
-input[type=checkbox] + label { 
-	background-image: url('/images/checkbox_signup.png'); 
+input[type=checkbox]:checked {
+	accent-color: grey;
 }
-input[type=checkbox]:checked + label {
-    background-image: url('/images/checkbox_signup.png');
-}
-input[type=checkbox]:disabled + label {
-    background-image: url('/images/checkbox_signup.png');
-}
-
