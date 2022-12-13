@@ -12,12 +12,12 @@ public class SignController {
 	}
 	
 	@GetMapping("/signup")
-	public String signup() {
-	return "/sign/signup";
-}
+		public String signup() {
+		return "/sign/signup";
+	}
 	@GetMapping("/signup2")
-	public String signup2() {
-	return "/sign/signup2";
-}
+		public String signup2() {
+		return "/sign/signup2";
+	}
 	
 }

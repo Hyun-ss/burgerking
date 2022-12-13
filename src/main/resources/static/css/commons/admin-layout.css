@@ -1,0 +1,37 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+body{
+	font-family: 'Jua', sans-serif;
+}
+.wrap-admin a{
+	text-decoration: none;
+	color:#fff;
+}
+.wrap-admin .admin_home {
+	text-align: center;
+	font-weight: 800;
+	font-size: 20px;
+}
+.wrap-admin{
+	width:250px;
+	background-color: #030760;
+	min-height:100vh;
+	padding:20px 20px;
+}
+.wrap-admin > ul > li{
+	line-height:30px;
+	margin-bottom: 20px;
+}
+.wrap-admin > ul > li dt{
+	color:#fff;
+	font-weight: 800;
+	font-size: 18px;
+}
+.wrap-admin > ul > li dd{
+	padding-left: 10px;
+}
+.admin-main p{
+	font-size:20px;
+	color:#000;
+}
+
