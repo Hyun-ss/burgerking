@@ -7,13 +7,17 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class SignController {
 
 	@GetMapping("/signin")
-		public String Signin() {
+		public String signin() {
 		return "/sign/signin";
 	}
 	
 	@GetMapping("/signup")
-	public String Signup() {
+	public String signup() {
 	return "/sign/signup";
+}
+	@GetMapping("/signup2")
+	public String signup2() {
+	return "/sign/signup2";
 }
 	
 }
