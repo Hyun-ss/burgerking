@@ -11,11 +11,6 @@ public class AdminController {
 		return "/admin/admin";
 	}
 	
-	@GetMapping("/admin/goods")
-	public String adminGoods() {
-		return "/admin/goods";
-	}
-	
 	@GetMapping("/admin/order")
 	public String adminOrder() {
 		return "/admin/order";

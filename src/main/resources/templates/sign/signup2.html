@@ -21,6 +21,7 @@
 			<div class="tit">
 				<h2>회원 정보 입력</h2>
 			</div>
+			<form action="/signup2" method="post">
 			<div class="tit01">
 				<h3>
 					<img src="/images/icon-1.png">
@@ -28,16 +29,16 @@
 				</h3>
 				<div class="basicInfo">
 					<span>
-						<p>아이디</p>
-						<input type="text" name="id">
+						<p>이메일</p>
+						<input type="text" name="email">
 					</span>
 					<span>
 						<p>비밀번호</p>
 						<input type="text" name="pass">
 					</span>
 					<span>
-						<p>이메일</p>
-						<input type="text" name="email">
+						<p>닉네임</p>
+						<input type="text" name="nickName">
 					</span>
 				</div>
 				<div class="tit02">
@@ -57,7 +58,7 @@
 					</span>
 					<span>
 						<p>전화번호</p>
-						<input type="text" name="Pnumber">
+						<input type="text" name="tel">
 					</span>
 				</div>
 				<div class="tit03">
@@ -73,11 +74,12 @@
 					<span>
 						<input type="checkbox">
 						SMS를 통한 이벤트/ 주문 정보의 수신에 동의합니다.
+						<button>회원가입</button>
 					</span>
-					
 				</div>
 				</div>
 			</div>
+			</form>
 		</div>
 	</div>
 </body>

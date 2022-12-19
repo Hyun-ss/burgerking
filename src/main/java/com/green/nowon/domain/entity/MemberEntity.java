@@ -29,13 +29,13 @@ public class MemberEntity extends BaseDateEntity{
 	@GeneratedValue(generator = "gen_mem", strategy = GenerationType.SEQUENCE)
 	private long mno;
 	
-	@Column(nullable = false, unique = true)
+	@Column(nullable = true, unique = true)
 	private String email;
 	
 	@Column(nullable = false)
 	private String pass;
 	
-	@Column(nullable = false)
+	
 	private String name;
 	
 	private String nickName; //사용여부 검토중

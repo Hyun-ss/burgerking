@@ -77,13 +77,13 @@
 					<p>
 						<img alt="" src="/images/logo/key.png"> &nbsp;&nbsp;일반 로그인
 					</p>
-					<form action="" method="post">
+					<form action="/signin" method="post">
 						<label class="login-input">
-							<input type="text" placeholder="아이디 (이메일)">
+							<input type="text" name="email" placeholder="아이디 (이메일)">
 						</label>
 						<br>
 						<label id="lpw"> 
-							<input type="text" placeholder="비밀번호" id="pw">
+							<input type="text" name="pass" placeholder="비밀번호" id="pw">
 							<button type="button" id="btn-showpw">
 								<img src="/images/logo/passwordshow.png" id="showpw" alt="" style="position: absolute; right: 45px; bottom: 0.1px;">
 							</button>
@@ -91,8 +91,8 @@
 								<img src="/images/logo/passwordhide.png" id="hidepw" alt="" style="position: absolute; right: 45px; bottom: 0.1px;">
 							</button>
 						</label>
-
-					</form>
+					
+										
 					<div class="login-simple">
 						<label> <input type="checkbox"> 아이디 저장
 						</label> <label> <input type="checkbox"> 자동 로그인
@@ -104,6 +104,7 @@
 							<a href="/signup"><button type="button"  class="btn" >회원가입</button></a>	
 						</label>
 					</div>
+				</form>
 					<div class="findmy">
 						<a href="#">아이디 찾기</a><a href="#">비밀번호 찾기</a>
 					</div>

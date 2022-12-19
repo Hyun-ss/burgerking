@@ -11,6 +11,29 @@
 		<h1>관리자페이지</h1>
 		<div>
 			<p>상품등록페이지</p>
+			<form action="/admin/goods" method="post">
+				<table>
+					<tr>
+						<td>상품명</td>
+						<td><input type="text" name="title" placeholder="상품명을 입력하세요"></td>
+					</tr>
+					<tr>
+						<td>상품설명</td>
+						<td colspan="2"><textarea name="content"></textarea></td>
+					</tr>
+					<tr>
+						<td>가격</td>
+						<td><input type="text" name="price"></td>
+					</tr>
+					<tr>
+						<td>재고</td>
+						<td><input type="text" name="stock"></td>
+					</tr>
+					<tr>
+						<td><button>등록</button></td>
+					</tr>
+				</table>
+			</form>
 		</div>
 	</main>
 </body>
