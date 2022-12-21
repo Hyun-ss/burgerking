@@ -12,9 +12,15 @@ import org.springframework.security.web.SecurityFilterChain;
 public class WebSecurityConfig {
 	
 	@Bean
+	MyUserDetailsService customUserDetailsService() {
+		return new MyUserDetailsService();
+	}
+	
+	@Bean
 	PasswordEncoder passwordEncoder() {
 		return new BCryptPasswordEncoder();
 	}
+	
 	
 	@Bean
 	public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
@@ -26,7 +32,7 @@ public class WebSecurityConfig {
 			)
 			.formLogin(formLogin->formLogin
 					.loginPage("/signin")
-					.loginProcessingUrl("/signin")//form태그의 action
+					.loginProcessingUrl("/member/login")//form태그의 action
 					.usernameParameter("email")//username ->email
 					.passwordParameter("pass") //password -> pass
 					.permitAll()
