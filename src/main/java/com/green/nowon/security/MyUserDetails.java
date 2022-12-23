@@ -10,6 +10,14 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 import com.green.nowon.domain.entity.MemberEntity;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+
+@Setter
+@Getter
 public class MyUserDetails extends User {
 
 	private String email;
@@ -20,9 +28,9 @@ public class MyUserDetails extends User {
 		super(username, password, authorities);
 	}
 	public MyUserDetails(MemberEntity entity) {
-		this(entity.getEmail(), entity.getPass(), entity.getRoles() //Set<MyRole>  --> Set<GrantedAuthority>
-				.stream() //Stream<MyRole>
-				.map(myRole->new SimpleGrantedAuthority(myRole.getRole()) ) //Stream<GrantedAuthority> "ROLE_USER" or ""
+		this(entity.getEmail(), entity.getPass(), entity.getRoles()
+				.stream()
+				.map(myRole->new SimpleGrantedAuthority(myRole.getRole()))
 				.collect(Collectors.toSet()));
 		
 		this.email=entity.getEmail();

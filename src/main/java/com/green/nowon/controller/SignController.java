@@ -1,9 +1,11 @@
 package com.green.nowon.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.green.nowon.domain.dto.MemberInsertDTO;
 import com.green.nowon.service.SignService;
@@ -35,6 +37,7 @@ public class SignController {
 		service.save(dto);
 		return "/sign/signin";
 	}
+	
 	
 	
 }

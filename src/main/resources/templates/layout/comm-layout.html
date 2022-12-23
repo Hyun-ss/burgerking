@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org"
+xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
  th:fragment="commLayout(head, main)" >
 <head>
 	<meta charset="UTF-8">
@@ -77,6 +78,10 @@
 								<li>
 									<a href="#"><span>COMM.</span></a>
 								</li>
+								<li sec:authorize="isAuthenticated()">
+									<span sec:authentication="principal.email"></span>
+									<span sec:authentication="principal.nickName"></span>
+								</li>
 							</ul>
 						</li>
 					</ul>
@@ -125,6 +130,11 @@
 									<a href="#"><span>음료&디저트</span></a>
 								</li>
 							</ul>
+							<div sec:authorize="isAuthenticated()">
+								<p th:text="${#authentication.email}"></p>
+								<p th:text="${#authentication.authorities}"></p>
+								<p th:text="${#authentication.authenticated}"></p>
+							</div>
 						</li>
 						<li>
 							<a><span>매장</span></a>

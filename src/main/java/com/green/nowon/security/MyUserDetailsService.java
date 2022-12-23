@@ -17,20 +17,29 @@ import com.green.nowon.domain.entity.MemberEntityRepository;
 import lombok.extern.log4j.Log4j2;
 
 @Log4j2
-public class MyUserDetailsService implements UserDetailsService{
-	
+public class MyUserDetailsService implements UserDetailsService {
+
 	@Autowired
 	private MemberEntityRepository repo;
+
 	
+	/*
+	 * @Override public MyUserDetails loadUserByUsername(String username) throws
+	 * UsernameNotFoundException { MemberEntity
+	 * entity=repo.findByEmail(username).orElseThrow(()->new
+	 * UsernameNotFoundException("존재하지 않는 이메일"));
+	 * 
+	 * Set<SimpleGrantedAuthority> authorities=entity.getRoles() .stream()
+	 * .map(myRole->new SimpleGrantedAuthority(myRole.getRole()))
+	 * .collect(Collectors.toSet()); return new MyUserDetails(username,
+	 * entity.getPass(), authorities); }
+	 */
+	 
+
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-		 MemberEntity entity=repo.findByEmail(username).orElseThrow(()->new UsernameNotFoundException("존재하지 않는 이메일"));
-		 
-		 Set<SimpleGrantedAuthority> authorities=entity.getRoles()
-				 .stream()
-				 .map(myRole->new SimpleGrantedAuthority(myRole.getRole()))
-				 .collect(Collectors.toSet());
-		 return new User(username, entity.getPass(), authorities);
+		return new MyUserDetails(
+				repo.findByEmail(username).orElseThrow(() -> new UsernameNotFoundException("존재하지 않은 이메일")));
 	}
 
 }

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html xmlns:th="http://thymeleaf.org" >
+<html xmlns:th="http://thymeleaf.org" 
+xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 	<head th:fragment="Head">
 		<meta charset="UTF-8">
 		<title>Insert title here</title>
@@ -81,9 +82,26 @@
 						</li>
 					</ul>
 					<div class="btn_login">
-						<button type="button">
-							<a href="/signin"><span>커스텀 주문</span></a>
+						<button sec:authorize="isAnonymous()" type="button">
+							<a href="/signin">
+								<span>커스텀 주문</span>
+							</a>
 						</button>
+						<button sec:authorize="isAuthenticated()" type="button">
+							<a href="/order">
+								<span>커스텀 주문</span>
+							</a>
+						</button>
+						<ul class="flex">
+						<li sec:authorize="isAuthenticated()">
+							<span sec:authentication="principal.email"></span> <!-- 로그인 했을때 뜨는 정보 -->
+							(
+							<span th:if="${#authentication.principal.nickName==null}" sec:authentication="principal.name"></span>
+							<span th:if="${#authentication.principal.nickName!=null}" sec:authentication="principal.nickName"></span>
+							)
+							<a href="/logout">로그아웃</a>
+						</li>
+					</ul>
 					</div>
 				</section>
 			</nav>

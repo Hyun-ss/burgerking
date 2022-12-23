@@ -9,5 +9,8 @@ public class CustomerController {
 	public String faq() {
 		return "/customer/faq";
 	}
-	
+	@GetMapping("/order")
+	public String order() {
+		return "/customer/order";
+	}
 }
