@@ -78,14 +78,10 @@ xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
 								<li>
 									<a href="#"><span>COMM.</span></a>
 								</li>
-								<li sec:authorize="isAuthenticated()">
-									<span sec:authentication="principal.email"></span>
-									<span sec:authentication="principal.nickName"></span>
-								</li>
 							</ul>
 						</li>
 					</ul>
-					<div class="btn_login">
+					<div class="btn_login" >
 						<button type="button">
 							<a href="/signin"><span>커스텀 주문</span></a>
 						</button>
@@ -130,11 +126,6 @@ xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
 									<a href="#"><span>음료&디저트</span></a>
 								</li>
 							</ul>
-							<div sec:authorize="isAuthenticated()">
-								<p th:text="${#authentication.email}"></p>
-								<p th:text="${#authentication.authorities}"></p>
-								<p th:text="${#authentication.authenticated}"></p>
-							</div>
 						</li>
 						<li>
 							<a><span>매장</span></a>

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html xmlns:th="http://thymeleaf.org" 
-xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 	<head th:fragment="Head">
 		<meta charset="UTF-8">
 		<title>Insert title here</title>
@@ -81,18 +81,25 @@ xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 							</ul>
 						</li>
 					</ul>
+					
 					<div class="btn_login">
-						<button sec:authorize="isAnonymous()" type="button">
-							<a href="/signin">
-								<span>커스텀 주문</span>
-							</a>
+						<button type="button" sec:authorize="isAuthenticated()" >
+							<a href="/item/menu-list"><span>커스텀 주문</span></a>
 						</button>
-						<button sec:authorize="isAuthenticated()" type="button">
-							<a href="/order">
-								<span>커스텀 주문</span>
-							</a>
+						<button type="button" sec:authorize="isAnonymous()">
+							<a href="/signin"><span>커스텀 주문</span></a>
 						</button>
-						<ul class="flex">
+					<!-- <ul class="flex">
+						<li sec:authorize="isAnonymous()" class="wrap-sub-login">
+							<a href="/signin">로그인</a>
+							<a href="/signup">회원가입</a>
+						</li>
+					</ul> -->
+					<ul class="flex">
+						<li sec:authorize="isAnonymous()">
+							<a href="/signin">로그인</a>
+							<a href="/signup">회원가입</a>
+						</li>
 						<li sec:authorize="isAuthenticated()">
 							<span sec:authentication="principal.email"></span> <!-- 로그인 했을때 뜨는 정보 -->
 							(
@@ -101,8 +108,10 @@ xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 							)
 							<a href="/logout">로그아웃</a>
 						</li>
+						
 					</ul>
 					</div>
+					
 				</section>
 			</nav>
 		</div>

@@ -20,7 +20,8 @@ public class SignServiceProcess implements SignService{
 	
 	@Override
 	public void save(MemberInsertDTO dto) {
-		repo.save(dto.toEntity(pe).addRole(MyRole.USER));
+		repo.save(dto.toEntity(pe)
+				.addRole(MyRole.USER));
 		
 	}
 

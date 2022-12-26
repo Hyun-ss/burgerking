@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+<th:block th:insert="~{layout/sign-layout :: Head}" />
+<link rel="stylesheet" href="/css/commons/common.css">
+<script type="text/javascript">
+	$(function(){
+		$.ajax({
+			url:"/menu-list/0",
+			success:function(result){
+				$("#cate1").html(result);
+			}
+		});
+	});
+</script>
+
+</head>
+<body>
+	<header>
+		<th:block th:insert="~{layout/sign-layout :: Header}" />
+	</header>
+	<section id="nb">
+		<div class="flex">
+			<div id="cate1">
+				
+			</div>
+		</div>
+		<ul>
+			<li th:each="dto:${list}">
+				<div>
+					<a href="#"><img th:src="${dto.defImgUrl}"></a>
+				</div>
+				<div class="info">
+					<p>
+						<a href="#"><span>[[${dto.title}]]</span></a>
+					</p>
+					<p>상품명</p>
+					<div class="price">
+						<i>
+							<span>sale정보</span>
+							<span>기본가격</span>
+						</i>
+					</div>
+				</div>
+			</li>
+		</ul>
+		
+	</section>
+	<footer>
+		<th:block th:insert="~{layout/sign-layout :: Footer}" />
+	</footer>
+</body>
+</html>

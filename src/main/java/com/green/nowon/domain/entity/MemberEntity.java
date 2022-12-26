@@ -18,21 +18,17 @@ import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
-import org.springframework.context.annotation.Bean;
-
 import com.green.nowon.security.MyRole;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
-@Setter
 @SequenceGenerator(name = "gen_mem", sequenceName = "seq_mem", initialValue = 1, allocationSize = 1)
 @Table(name = "burger_member")
 @Entity
@@ -57,6 +53,8 @@ public class MemberEntity extends BaseDateEntity{
 	
 	@Column(nullable = false) 
 	private String tel; //사용여부 검토중
+	
+	
 	
 	@Builder.Default
 	@CollectionTable(name = "my_role")
