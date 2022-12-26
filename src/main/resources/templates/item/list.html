@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<ul>
+		<li th:each="dto:${list}">
+			<div>
+				<img th:src="${dto.defImgUrl}">
+			</div>
+			<div>
+				<p>
+					<a href="#">[[${dto.title}]]</a>
+				</p>
+			</div>
+		</li>
+	</ul>
+</body>
+</html>

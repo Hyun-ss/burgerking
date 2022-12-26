@@ -40,12 +40,16 @@ public class ItemController {
 	
 	@GetMapping("/item/menu-list")
 	public String menuList() {
+		
 		return "item/menu-list";
 	}
 	
 	@GetMapping("/common/category/{no}/goods")
 	public String goodsOfCategory(@PathVariable long no, Model model) {
 		service.goodsOfCategory(no, model);
-		return "goods/category-list";
+		return "item/list";
 	}
+//	
+	
+	
 }
