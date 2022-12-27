@@ -8,18 +8,24 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
-import lombok.Setter;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
 
-@Setter
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
+@Getter
 @Table(name = "burger_cart_item")
 @Entity
 public class CartItemEntity {
 	
 	@Id
-	@GeneratedValue(generator = "gen_cart_item" ,strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long no;
 	
-	private int count;
+	private int count;//구매수량
 	
 	@JoinColumn
 	@ManyToOne
@@ -29,8 +35,9 @@ public class CartItemEntity {
 	@ManyToOne
 	private ItemEntity item;
 	
-	public int calcPrice() {
-		return count*item.getPrice();
+	public CartItemEntity updateCount(int count) {
+		this.count += count;
+		return this;
 	}
 	
 }

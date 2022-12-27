@@ -3,12 +3,15 @@ package com.green.nowon.service.impl;
 import java.util.Map;
 import java.util.stream.Collectors;
 
+import javax.transaction.Transactional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.ui.Model;
 import org.springframework.web.multipart.MultipartFile;
 
+import com.green.nowon.domain.dto.ItemDetailDTO;
 import com.green.nowon.domain.dto.ItemInsertDTO;
 import com.green.nowon.domain.dto.ItemListDTO;
 import com.green.nowon.domain.entity.CategoryEntityRepository;
@@ -75,5 +78,14 @@ public class ItemServiceProcess implements ItemService {
 				.stream()
 				.map(ItemListDTO::new)
 				.collect(Collectors.toList()));
+	}
+
+	@Transactional
+	@Override
+	public void detail(long no, Model model) {
+		model.addAttribute("detail", itemRepo.findById(no)
+				.map(ItemDetailDTO::new)
+				.orElseThrow());
+		
 	}
 }
