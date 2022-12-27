@@ -16,7 +16,7 @@ public class ItemListDTO {
 	private String defImgUrl;
 	
 	public ItemListDTO(ItemEntity e) {
-		this.no = e.getNo();
+		this.no = e.getIno();
 		this.title = e.getTitle();
 		this.price = e.getPrice();
 		this.stock = e.getStock();

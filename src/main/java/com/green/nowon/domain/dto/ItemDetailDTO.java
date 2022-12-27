@@ -22,7 +22,7 @@ public class ItemDetailDTO {
 	private List<ItemListImgDTO> imgs;
 
 	public ItemDetailDTO(ItemEntity e) {
-		this.no = e.getNo();
+		this.no = e.getIno();
 		this.title = e.getTitle();
 		this.content = e.getContent();
 		this.price = e.getPrice();

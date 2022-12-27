@@ -53,7 +53,7 @@ public class CartServiceProcess implements CartService {
 						.build()));
 		
 		//존재하지 않으면 카트생성됨
-		cartItemRepo.findByCartNoAndItemNo(cart.getNo(), dto.getItemNo())
+		cartItemRepo.findByCartNoAndItemIno(cart.getNo(), dto.getItemNo())
 				.ifPresentOrElse(
 						//존재하면 구매수량 증가
 						e->e.updateCount(dto.getCount()), 

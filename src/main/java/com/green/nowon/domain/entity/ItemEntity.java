@@ -29,7 +29,7 @@ public class ItemEntity {
 	
 	@Id
 	@GeneratedValue(generator = "gen_item" ,strategy = GenerationType.SEQUENCE)
-	private long no;
+	private long ino;
 	
 	@Column(nullable = false)
 	private String title;

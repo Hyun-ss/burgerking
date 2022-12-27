@@ -11,7 +11,6 @@ public class CartItemListDTO {
 	private int count; //구매수량
 	
 	private int dPrice; //배송비
-	private int sPrice; //할인금액
 	
 	private ItemListDTO item;
 
@@ -19,7 +18,6 @@ public class CartItemListDTO {
 		this.no = e.getNo();
 		this.count = e.getCount();
 		this.dPrice = 3000;
-		this.sPrice = 0;
 		this.item = new ItemListDTO(e.getItem());
 	}
 	
