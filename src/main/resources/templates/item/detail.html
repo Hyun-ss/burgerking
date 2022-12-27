@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+<th:block th:insert="~{layout/sign-layout :: Head}" />
+<link rel="stylesheet" href="/css/commons/common.css">
+
+</head>
+<body>
+	<header>
+		<th:block th:insert="~{layout/sign-layout :: Header}" />
+	</header>
+	<h1>장바구니페이지</h1>
+	<section id="cart">
+		<p>장바구니</p>
+		<div class="wrap">
+			<table>
+				<thead>
+					<tr>
+						<td>선택</td>
+						<td>상품이미지</td>
+						<td>상품정보</td>
+						<td>구매수량</td>
+						<td>상품금액</td>
+						<td>배송비</td>
+						<td>할인금액</td>
+						<td>주문금액</td>
+						<td>주문하기</td>
+					</tr>
+				</thead>
+				<tbody>
+					
+				</tbody>
+			</table>
+		</div>		
+	</section>
+	<footer>
+		<th:block th:insert="~{layout/sign-layout :: Footer}" />
+	</footer>
+</body>
+</html>
