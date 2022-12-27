@@ -1,4 +1,8 @@
 @charset "UTF-8";
+header{
+	width:1440px;
+	margin:0 auto;
+}
 
 #menu {
 	position: relative;
@@ -10,13 +14,14 @@
 	position: relative;
 	height: 120px;
 	padding-top: 24px;
-	margin-right: 100px;
-	margin-left: 10px;
+	/* margin-right: 100px;
+	margin-left: 10px; */
+	
 	font-family: 'Jua', sans-serif;
 }
 #menu .logo>a{
 	position: absolute;
-    left: 0;
+    left: -100px;
     top: -5px;
     width: 180px;
     height: 120px;
@@ -75,7 +80,7 @@
 .btn_login>button{
 	background: #d94e28;
 	position: absolute;
-	right: 5px;
+	right: 0;
 	top: 52%;
 	width: 160px;
 	height: 45px;
@@ -93,4 +98,12 @@
 	letter-spacing: 2px;
 }
 
+.security-login{
+	position:absolute;
+	right:0;
+}
 
+.security-login ul li a{
+	margin-right:5px;
+	display: inline-block;
+}

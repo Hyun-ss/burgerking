@@ -18,14 +18,20 @@
 					<a href="/"></a>
 				</section>
 				<section class="mnb">					
-					<div class="btn_login">
+					<div class="btn_login" sec:authorize="isAnonymous()">
 						<button type="button">
 							<a href="/signup"><span>회원가입</span></a>
 						</button>
 					</div>
-					<ul class="top-menu">
+					<ul class="top-menu" sec:authorize="isAnonymous()">
 						<li><a href="/"><span>브랜드홈</span></a></li>
 						<li><a href="/signin"><span>로그인</span></a></li>
+						<li><a href="/faq"><span>고객센터</span></a></li>
+						<li><a href="/member/cart"><span>장바구니</span></a></li>
+					</ul>
+					<ul class="top-menu" sec:authorize="isAuthenticated()">
+						<li><a href="/"><span>브랜드홈</span></a></li>
+						<li><a href="/logout"><span>로그아웃</span></a></li>
 						<li><a href="/faq"><span>고객센터</span></a></li>
 						<li><a href="/member/cart"><span>장바구니</span></a></li>
 					</ul>
