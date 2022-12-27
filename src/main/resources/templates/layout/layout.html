@@ -84,7 +84,7 @@
 					
 					<div class="btn_login">
 						<button type="button" sec:authorize="isAuthenticated()" >
-							<a href="/item/menu-list"><span>커스텀 주문</span></a>
+							<a th:href="|/common/category/1/goods|"><span>커스텀 주문</span></a>
 						</button>
 						<button type="button" sec:authorize="isAnonymous()">
 							<a href="/signin"><span>커스텀 주문</span></a>

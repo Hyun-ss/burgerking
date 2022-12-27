@@ -1,5 +1,6 @@
 package com.green.nowon.service.impl;
 
+import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
@@ -66,13 +67,14 @@ public class ItemServiceProcess implements ItemService {
 		return MyFileUtils.fileUpload(goodsimg, locationTemp);
 	}
 	
+	@Transactional
 	@Override
 	public void goodsOfCategory(long cateNo, Model model) {
 		//카테고리에 해당하는 상품들모두
 //		cates=new ArrayList<>();
 //		categoryList(cateRepo.findById(cateNo).get());
 //		
-		model.addAttribute("cate", cateRepo.findById(cateNo));
+		model.addAttribute("cate", cateRepo.findById(cateNo).get());
 		
 		model.addAttribute("list", cateItemRepo.findAllByCategoryNo(cateNo)
 				.stream()
@@ -88,4 +90,5 @@ public class ItemServiceProcess implements ItemService {
 				.orElseThrow());
 		
 	}
+
 }
