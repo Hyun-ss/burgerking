@@ -1,5 +1,6 @@
 package com.green.nowon.service.impl;
 
+import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
@@ -72,11 +73,15 @@ public class ItemServiceProcess implements ItemService {
 //		cates=new ArrayList<>();
 //		categoryList(cateRepo.findById(cateNo).get());
 //		
-		model.addAttribute("cate", cateRepo.findById(cateNo));
+		model.addAttribute("cate", cateRepo.findById(cateNo).get());
 		
 		model.addAttribute("list", cateItemRepo.findAllByCategoryNo(cateNo)
 				.stream()
 				.map(ItemListDTO::new)
 				.collect(Collectors.toList()));
 	}
+
+	
+
+	
 }

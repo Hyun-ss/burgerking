@@ -14,5 +14,9 @@ public interface ItemService {
 	Map<String, String> fileTempUpload(MultipartFile goodsimg);
 
 	void goodsOfCategory(long no, Model model);
+
+
+
+	
 	
 }
