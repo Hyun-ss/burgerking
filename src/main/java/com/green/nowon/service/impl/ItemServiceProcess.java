@@ -12,6 +12,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.ui.Model;
 import org.springframework.web.multipart.MultipartFile;
 
+import com.green.nowon.domain.dto.ItemDetailDTO;
 import com.green.nowon.domain.dto.ItemInsertDTO;
 import com.green.nowon.domain.dto.ItemListDTO;
 import com.green.nowon.domain.entity.CategoryEntityRepository;
@@ -81,7 +82,13 @@ public class ItemServiceProcess implements ItemService {
 				.collect(Collectors.toList()));
 	}
 
-	
+	@Transactional
+	@Override
+	public void detail(long no, Model model) {
+		model.addAttribute("detail", itemRepo.findById(no)
+				.map(ItemDetailDTO::new)
+				.orElseThrow());
+		
+	}
 
-	
 }

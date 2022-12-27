@@ -52,7 +52,12 @@ public class ItemController {
 		service.goodsOfCategory(no, model);
 		return "item/list";
 	}
-//	
-	
+		
+	@GetMapping("/item/detail/{no}") //상품디테일
+	public String detail(@PathVariable long no, Model model) {
+		service.detail(no, model);
+		return "item/detail";
+	}
+
 	
 }
