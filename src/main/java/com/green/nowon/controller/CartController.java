@@ -6,6 +6,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.green.nowon.domain.dto.CartItemSaveDTO;
 import com.green.nowon.security.MyUserDetails;
@@ -26,6 +27,7 @@ public class CartController {
 	}
 	
 	//인증이후 처리되는 url
+	@ResponseBody
 	@PostMapping("/member/cart")
 	public void cartItems(CartItemSaveDTO dto, @AuthenticationPrincipal MyUserDetails myUserDetails) {
 		
