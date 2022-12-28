@@ -44,6 +44,7 @@ public class CartServiceProcess implements CartService {
 		
 	}
 
+	@Transactional
 	@Override
 	public void save(CartItemSaveDTO dto, String email) {
 		//처음저장시 카트 존재하지않음
