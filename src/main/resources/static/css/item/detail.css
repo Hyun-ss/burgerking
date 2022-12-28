@@ -1,0 +1,37 @@
+@charset "UTF-8";
+
+#cart .wrap{
+	width:1440px;
+	margin: 0 auto;
+	position: relative;
+}
+.defImg{
+	width: 420px;
+	height: 420px;
+	background-repeat:no-repeat;
+	background-position: center;
+	background-size: contain;
+	margin: 20px;
+}
+#cart>.wrap .item-info{
+	position: absolute;
+	left: 500px;
+	margin: 20px;
+	width: 550px;
+}
+#cart>.wrap .item-info ul li{
+	margin-top: 20px;
+}
+#cart>.wrap .item-info ul li dl dt{
+	width: 160px; 
+	color: #777;
+}
+#cart>.wrap .item-info ul li dl dd .tPrice{
+	position: absolute;
+	left: 160px;
+}
+#cart>.wrap .item-info ul li .title{
+	font-size: 26px;
+	font-weight: bold;
+	line-height: 30px;
+}

@@ -41,14 +41,14 @@
 		
 			<div th:each="dto:${list}" class="menu-list">
 				<div class="menu-list-img flex between">
-					<a href=""><img th:src="${dto.defImgUrl}"></a>
+					<a th:href="|/item/detail/${dto.no}|"><img th:src="${dto.defImgUrl}"></a>
 				</div>
 				<div class="menu-info">
 					<p>
-						<a href="#">[[${dto.title}]]</a>
+						<a th:href="|/item/detail/${dto.no}|">[[${dto.title}]]</a>
 					</p>
 					<p>
-						<a href="#">[[${dto.price}]]원</a>
+						<a th:href="|/item/detail/${dto.no}|">[[${dto.price}]]원</a>
 					</p>
 				</div>
 			</div>
