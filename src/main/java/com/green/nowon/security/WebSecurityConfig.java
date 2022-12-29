@@ -28,7 +28,8 @@ public class WebSecurityConfig  {
 		http
 			.authorizeRequests(authorize -> authorize
 					.antMatchers("/css/**","/js/**","/images/**").permitAll()
-					.antMatchers("/","/signup","/signup2","/customer/**","/admin/**","/item/**","/menu-list2/**","/menu-list/**").permitAll()
+					.antMatchers("/","/signup","/signup2","/customer/**","/item/**","/menu-list2/**","/menu-list/**").permitAll()
+					.antMatchers("/admin/**").hasRole("ADMIN")
 					.anyRequest().authenticated()
 			)
 			.formLogin(formLogin->formLogin
