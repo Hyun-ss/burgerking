@@ -37,7 +37,6 @@ public class SignController {
 		service.save(dto);
 		return "/sign/signin";
 	}
-	
 	@ResponseBody
 	@GetMapping("/signin-check")
 	public boolean loginCheck(Authentication auth) {
@@ -45,5 +44,6 @@ public class SignController {
 		//비로그인시 는 null
 		return auth==null? false:true;
 	}
+	
 	
 }
