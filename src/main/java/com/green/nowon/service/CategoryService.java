@@ -12,4 +12,6 @@ public interface CategoryService {
 
 	void listCategory(Long parentNo, Model model);
 
+	void fistCategoryList(Long parentNo,Model model);
+
 }
