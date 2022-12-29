@@ -13,6 +13,9 @@ public class ItemListDTO {
 	private int price;
 	private int stock;
 	
+	private int sPrice;
+	private int dPrice;
+	
 	private String defImgUrl;
 	
 	public ItemListDTO(ItemEntity e) {
@@ -21,6 +24,8 @@ public class ItemListDTO {
 		this.price = e.getPrice();
 		this.stock = e.getStock();
 		this.defImgUrl = e.defImg().getUrl()+e.defImg().getNewName();
+		sPrice=0;
+		dPrice=3000;
 		
 		
 	}
