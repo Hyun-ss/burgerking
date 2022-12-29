@@ -9,6 +9,16 @@ xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
 	<link rel="stylesheet" href="/css/commons/comm-header.css">
 	<link rel="stylesheet" href="/css/commons/comm-footer.css">		
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$.ajax({
+				url:"/menu-list2/0",
+				success:function(result){
+					$("#cate-hover-list").html(result);
+				}
+			});
+		});
+	</script>
 </head>
 <body>
 	<header>
