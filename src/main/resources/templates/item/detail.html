@@ -72,8 +72,7 @@
 		<th:block th:insert="~{layout/sign-layout :: Header}" />
 	</header>
 	<h1>디테일페이지</h1>
-	<section id="cart">
-		<p>상품상세정보</p>
+	<section id="detail">		
 		<div class="wrap">
 			<div class="flex between">
 				<div class="defImg" th:style="|background-image: url('${detail.defImgUrl}');|"></div>
@@ -86,6 +85,7 @@
 							<dl class="flex">
 								<dt>상품가격</dt>
 								<dd th:text="${#numbers.formatInteger(detail.price,0,'COMMA')}">상품가격<dd>
+								<span>원</span>
 							</dl>
 						</li>
 						<li>
@@ -103,7 +103,7 @@
 									<div class="flex free-base">
 										<span>(</span>
 										<span th:text="${#numbers.formatInteger(30000,0,'COMMA')}">무료기준금액</span>
-										<span>원 이상 무료)</span>
+										<span class="free">원 이상 무료)</span>
 									</div>
 								</dd>
 							</dl>
@@ -123,7 +123,7 @@
 							</dl>
 						</li>
 						<li class="flex between">
-							<div>
+							<div class="btn-d">
 								<input type="hidden" id="no" th:value="${detail.no}">
 								<button type="button" id="btn-cart" onclick="btnCartClicked()">장바구니</button>
 								<button type="button" id="btn-order" onclick="btnOrderClicked()">주문하기</button>
