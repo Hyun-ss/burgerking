@@ -36,6 +36,12 @@ public class CategoryController {
 		service.firstCategory(model);
 		return "/admin/category";
 	}
+	
+	@GetMapping("/menu-list2/{parentNo}")
+	public String fistCategoryList(@PathVariable long parentNo, Model model) {
+		service.fistCategoryList(parentNo, model);
+		return "/admin/ul-category2";
+	}
 	//리스트 페이지로 뿌려주기
 	@GetMapping("/menu-list/{parentNo}")
 	public String listCategory(@PathVariable long parentNo, Model model) {

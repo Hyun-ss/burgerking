@@ -48,7 +48,7 @@
 						<a th:href="|/item/detail/${dto.no}|">[[${dto.title}]]</a>
 					</p>
 					<p>
-						<a th:href="|/item/detail/${dto.no}|">[[${dto.price}]]원</a>
+						<a th:href="|/item/detail/${dto.no}|" th:text="${#numbers.formatInteger(dto.price , 0 ,'COMMA')}">원</a>
 					</p>
 				</div>
 			</div>

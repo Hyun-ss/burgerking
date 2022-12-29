@@ -45,4 +45,11 @@ public class CategoryServiceProcess implements CategoryService {
 		
 	}
 
+	@Override
+	public void fistCategoryList(Long parentNo,Model model) {
+		/* if(parentNo.intValue()==0)parentNo=null; */
+		model.addAttribute("list", repo.findByParentNoIsNullOrderByNameAsc());
+		
+	}
+
 }

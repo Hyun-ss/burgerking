@@ -169,11 +169,12 @@ main > .order-info >div  {
 main > .order-info >div >button{
 	width:140px;
 	height:50px;
-	background-color: #d72300;
+	background-color: #d94e28;
 	border-radius: 50px;
 	font-size: 24px;
 	color: #fff;
-	font-weight: 800;
+	
+	font-family: 'Jua', sans-serif;
 }
 /* main > .order-info > ul > li{
 	border-right: 1px solid #a9a9a9;
