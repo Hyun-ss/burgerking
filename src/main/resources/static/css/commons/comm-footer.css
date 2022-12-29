@@ -10,13 +10,13 @@ footer>.wrap{
 	font-family: 'Jua', sans-serif;
 }
 #foot-menu>.wrap{
-	max-width: 1184px;
+	max-width: 1440px;
 	margin: 0 auto;
 	padding: 0 20px;
 }
 #foot-menu>.wrap>ul{
 	padding-top: 38px;
-	padding-left: 90px;
+	padding-left: 85px;
 }
 
 #foot-menu>.wrap>ul>li{
@@ -47,7 +47,7 @@ footer>.wrap{
 
 #copyright{
 	height: 260px;
-	max-width: 960px;
+	max-width: 1240px;
 	border-top: 1px solid #bba391;
 	margin: 0 auto;
 	font-family: 'Jua', sans-serif;

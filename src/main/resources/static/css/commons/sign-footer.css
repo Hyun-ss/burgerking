@@ -6,7 +6,7 @@ footer>.wrap{
 	background: #624120;
 }
 #copyright{
-	max-width: 960px;
+	max-width: 1240px;
 	margin: 0 auto;
 	font-family: 'Jua', sans-serif;
 }
@@ -17,12 +17,14 @@ footer>.wrap{
 .copy-L>p{
 	color: #f5c259;
 	margin-bottom: 20px;
+	padding: 0;
 	font-size: 20px;
 	font-weight: bold;
 	letter-spacing: 1px;
 }
 .copy-L>.wrap>p{
 	font-size: 13px;
+	padding: 0;
 }
 .copy-L>.wrap>dl{
 	margin-bottom: 5px;

@@ -1,6 +1,10 @@
 @charset "UTF-8";
 
 header{background-color: #d94e28}
+header>.wrap{
+	width: 1440px;
+	margin: 0 auto;
+}
 #menu {
 	position: relative;
 	margin-left: 100px;
