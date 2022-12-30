@@ -27,8 +27,9 @@ public class WebSecurityConfig  {
 	public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
 		http
 			.authorizeRequests(authorize -> authorize
-					.antMatchers("/css/**","/js/**","/images/**").permitAll()
-					.antMatchers("/","/signup","/signup2","/customer/**","/admin/**","/item/**","/menu-list2/**","/menu-list/**").permitAll()
+					.antMatchers("/css/**","/js/**","/images/**","/webjars/**","/files/**","/message/**").permitAll()
+					.antMatchers("/","/signup","/signup2","/customer/**","/item/**","/menu-list2/**","/menu-list/**","/my-websocket/**","/common/**").permitAll()
+					.antMatchers("/admin/**").hasRole("ADMIN")
 					.anyRequest().authenticated()
 			)
 			.formLogin(formLogin->formLogin
