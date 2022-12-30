@@ -11,7 +11,7 @@ sourceCompatibility = '11'
 
 war {
   enabled = true
-  archiveName("myShop.war")
+  archiveName("burgermat.war")
 }
 bootWar { 
   enabled = false 
