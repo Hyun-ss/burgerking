@@ -32,18 +32,18 @@ public class ChatBotController {
     "<div class='msg bot flex'>"+
     		
 	    "<div class='icon'>"+
-    		"<img src='/images/icon/robot-solid.svg' />"+
+    		"<img src='/images/icon/chat_logo.png' />"+
 	    "</div>"+
 	    "<div class='message'>"+
 		    "<div class='part'>"+
-		    		"<p>안녕하세요, CODD클라우드봇이에요. 궁금한 점은 언제든지 저에게 물어보세요!</p>"+
+		    		"<p>안녕하세요, CUSTOM 챗도우미에요. 궁금한 점은 언제든지 저에게 물어보세요!</p>"+
 		    "</div>" +   
 		    "<div class='part'>"+
 		    	"<p>아래는 많은 분들이 궁금해하신 내용이에요</p>"+ 
 			    "<div class='flex center menu'>"+ 
 			    	"<div class='menu-item'><span onclick='menuclicked(this)'>상품문의</span></div>"+
 			    	"<div class='menu-item'><span onclick='menuclicked(this)'>결제문의</span></div>"+
-			    	"<div class='menu-item'><span onclick='menuclicked(this)'>배송문의</span></div>"+
+			    	"<div class='menu-item'><span onclick='menuclicked(this)'>배달문의</span></div>"+
 			    "</div>"+
 			 "</div>"+
 			 "<div class='time'>"+
@@ -69,7 +69,7 @@ public class ChatBotController {
     "<div class='msg bot flex'>"+
     		
 	    "<div class='icon'>"+
-    		"<img src='/images/icon/robot-solid.svg' />"+
+    		"<img src='/images/icon/chat_logo.png' />"+
 	    "</div>"+
 	    "<div class='message'>"+
 		    "<div class='part'>"+
